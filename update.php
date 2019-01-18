@@ -57,5 +57,18 @@ function print_list(){
     <?php
     print_description();
      ?>
+     <a href="created.php">created</a>
+    <form action="create_process.php" method="post">
+      <p>
+        <input type="text" name="tittle" placeholder="Tittle" value="<?php print_title()?>;">
+      </p>
+      <p><textarea name="description" placeholder="Description"><?php print_description();?>"></textarea></p>
+      <p><input type="submit"></p>
+
+
+
+
+
+
   </body>
 </html>

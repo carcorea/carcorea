@@ -35,6 +35,7 @@ function print_list(){
       print_title();
       ?>
     </title>
+    <link rel="stylesheet" href="./style.css">
   </head>
   <body>
     <h1><a href="index.php">WEB</a></h1>
@@ -43,19 +44,12 @@ function print_list(){
       print_list();
       ?>
     </ol>
-    <a href="create.php">create</a>
-    <?php  if(isset($_GET['id'])){ ?>
-    <a href="update.php?id=<?=$_GET['id'] ?>">update</a>
-=
-    <?php } ?>
-  // php를 isset 에서 감싸는것은 a 태그를 실행시키기 위함
-    <h2>
-      <?php
-      print_title();
-      ?>
-    </h2>
-    <?php
-    print_description();
-     ?>
+    <a href="created.php">created</a>
+   <form action="create_process.php" method="post">
+     <p>
+       <input type="text" name="tittle" placeholder="Tittle">
+     </p>
+     <p><textarea name="description" placeholder="Description"></textarea></p>
+     <p><input type="submit"></p>
   </body>
 </html>
